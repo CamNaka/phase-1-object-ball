@@ -26,3 +26,27 @@ function goodPractices() {
 
 // then, call the function so it runs!
 goodPractices()
+
+function goodPractices(playerInput) {
+  const game = gameObject();
+
+
+  for (const gameKey in game) {
+    const teamObj = game[gameKey]
+
+
+
+    for (const teamKey in teamObj) {
+      const playerObj = teamObj.players
+
+
+      for (const playerKey in playerObj) {
+        if (playerKey === playerInput) {
+
+
+          return playerObj[playerKey].points
+        }
+      }
+    }
+  }
+}
